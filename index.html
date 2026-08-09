@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Swass Analytics</title>
+<meta name="description" content="Projection models for NCAA basketball, NCAA football, and the NHL.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --field:#08161B; --panel:#102A31; --panel-2:#173A44;
+  --line:#1F5058;
+  --chalk:#EAF0F6; --muted:#8199B0; --accent:#3FD0C9;
+  --gain:#8CC63F; --loss:#E8615C;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--field);color:var(--chalk);
+  font-family:"Roboto Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:14px;line-height:1.55;-webkit-text-size-adjust:100%;
+  font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+header{border-bottom:1px solid var(--line);background:var(--panel)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+.brand{display:flex;align-items:baseline;gap:12px;padding:14px 0 16px;
+  flex-wrap:wrap}
+.brand h1{font-weight:700;font-size:22px;letter-spacing:.14em;
+  text-transform:uppercase;margin:0}
+.brand .stamp{font-size:11px;color:var(--muted);letter-spacing:.08em}
+main{padding:22px 0 60px}
+.note{color:var(--muted);font-size:13px;margin:0 0 22px;max-width:70ch}
+h2{font-weight:700;font-size:16px;letter-spacing:.12em;
+  text-transform:uppercase;margin:26px 0 10px;color:var(--chalk)}
+h2:first-of-type{margin-top:0}
+
+/* portal grid: the signature element */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+  overflow:hidden;display:flex;flex-direction:column;
+  transition:border-color .12s,transform .12s}
+.card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.card .kick{padding:7px 12px;background:var(--panel-2);font-size:11px;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--muted);
+  display:flex;justify-content:space-between;align-items:center;gap:8px}
+.card .kick .dot{width:8px;height:8px;border-radius:99px;
+  background:var(--accent);flex:none}
+.card .body{padding:14px 12px 12px;flex:1}
+.card .nm{display:block;font-weight:700;font-size:20px;line-height:1.2;
+  letter-spacing:.04em;color:var(--chalk)}
+.card .nm:hover{color:var(--accent)}
+.card .blurb{color:#C4D2DF;font-size:13px;margin:8px 0 0}
+.card .foot{padding:9px 12px;border-top:1px solid rgba(36,64,92,.6);
+  display:flex;gap:6px;flex-wrap:wrap}
+.card .foot a{font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--muted);border:1px solid var(--line);border-radius:6px;
+  padding:4px 9px}
+.card .foot a:hover{color:var(--chalk);border-color:var(--accent)}
+.pill{display:inline-block;padding:1px 7px;border-radius:99px;font-size:10px;
+  letter-spacing:.08em;text-transform:uppercase;background:var(--panel-2);
+  color:var(--muted)}
+.prose{max-width:78ch}
+.prose h3{font-size:14px;letter-spacing:.1em;text-transform:uppercase;
+  margin:28px 0 8px;color:var(--accent);font-weight:500}
+.prose p{margin:0 0 12px;color:#C4D2DF}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:12px;
+  padding:16px 0 40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+@media(max-width:760px){.wrap{padding:0 12px}}
+</style>
+</head>
+<body><header><div class="wrap">
+<div class="brand"><h1>Swass Analytics</h1>
+<span class="stamp">Projection models &middot; NCAA MBB &middot; NCAA FB &middot; NHL</span></div>
+</div></header>
+<main><div class="wrap">
+
+<p class="note">Three model builds, each rebuilt on its own schedule. Pick a sport
+to see the current slate, or jump straight to a section.</p>
+
+<h2>Models</h2>
+<div class="grid">
+
+  <div class="card">
+    <div class="kick"><span>NCAA MBB</span><span class="dot"></span></div>
+    <div class="body">
+      <a class="nm" href="https://volanalytics.github.io/NCAABB-Projections/">Projections</a>
+      <p class="blurb">Game slate with rotation-level detail: each team's units,
+      what they are worth against that specific opponent, and on-floor share.</p>
+    </div>
+    <div class="foot">
+      <a href="https://volanalytics.github.io/NCAABB-Projections/index.html">Slate</a>
+      <a href="https://volanalytics.github.io/NCAABB-Projections/teams.html">Teams</a>
+      <a href="https://volanalytics.github.io/NCAABB-Projections/players.html">Players</a>
+      <a href="https://volanalytics.github.io/NCAABB-Projections/tracking.html">Tracking</a>
+      <a href="https://volanalytics.github.io/NCAABB-Projections/about.html">About</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="kick"><span>NCAA FB</span><span class="dot"></span></div>
+    <div class="body">
+      <a class="nm" href="https://volanalytics.github.io/NCAAFB-Projections/">Projections</a>
+      <p class="blurb">Projected scores, margins and totals across the college
+      football slate, with a market page comparing the model to posted numbers.</p>
+    </div>
+    <div class="foot">
+      <a href="https://volanalytics.github.io/NCAAFB-Projections/index.html">Games</a>
+      <a href="https://volanalytics.github.io/NCAAFB-Projections/ev.html">Market</a>
+      <a href="https://volanalytics.github.io/NCAAFB-Projections/teams.html">Teams</a>
+      <a href="https://volanalytics.github.io/NCAAFB-Projections/tracking.html">Tracking</a>
+      <a href="https://volanalytics.github.io/NCAAFB-Projections/about.html">About</a>
+    </div>
+  </div>
+
+  <div class="card" style="--accent:#5BC8E8;--panel:#0F2130;--panel-2:#16303F;--line:#204A5E">
+    <div class="kick"><span>NHL</span><span class="dot"></span></div>
+    <div class="body">
+      <a class="nm" href="https://volanalytics.github.io/NHL-Projections/">Projections</a>
+      <p class="blurb">Skater and goalie projections for the current window, plus
+      a market page and running accuracy tracking.</p>
+    </div>
+    <div class="foot">
+      <a href="https://volanalytics.github.io/NHL-Projections/index.html">Slate</a>
+      <a href="https://volanalytics.github.io/NHL-Projections/players.html">Players</a>
+      <a href="https://volanalytics.github.io/NHL-Projections/ev.html">Market</a>
+      <a href="https://volanalytics.github.io/NHL-Projections/tracking.html">Tracking</a>
+      <a href="https://volanalytics.github.io/NHL-Projections/about.html">About</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="prose">
+<h3>How to read these</h3>
+<p>Every number on these sites is model output, not advice. Projected margins
+carry real variance — anything inside a few points is close to a coin flip, and
+the tracking pages show how each model has actually done rather than how it
+looked at the time.</p>
+</div>
+
+</div></main>
+<footer><div class="wrap">Vol Analytics &middot; model output, not advice.</div></footer>
+</body></html>
