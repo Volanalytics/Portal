@@ -62,10 +62,10 @@ h2:first-of-type{margin-top:0}
 .card .nm .ar{font-size:15px;line-height:1}
 .card .blurb{color:#C4D2DF;font-size:13px;margin:0;order:1}
 .card .foot{padding:9px 12px;border-top:1px solid rgba(36,64,92,.6);
-  display:flex;gap:6px;flex-wrap:wrap}
+  display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
 .card .foot a{font-size:11px;letter-spacing:.08em;text-transform:uppercase;
   color:var(--muted);border:1px solid var(--line);border-radius:6px;
-  padding:4px 9px}
+  padding:4px 9px;text-align:center}
 .card .foot a:hover{color:var(--chalk);border-color:var(--accent)}
 .pill{display:inline-block;padding:1px 7px;border-radius:99px;font-size:10px;
   letter-spacing:.08em;text-transform:uppercase;background:var(--panel-2);
@@ -93,7 +93,7 @@ to see the current slate, or jump straight to a section.</p>
 <div class="grid">
 
   <div class="card">
-    <div class="kick"><span>NCAA MBB</span><span class="dot"></span></div>
+    <div class="kick"><span>NCAA Basketball</span><span class="dot"></span></div>
     <div class="body">
       <a class="nm" href="https://volanalytics.github.io/NCAABB-Projections/"><span class="ar">&#9654;</span> Projections</a>
       <p class="blurb">Game slate with rotation-level detail: each team's units,
@@ -109,7 +109,7 @@ to see the current slate, or jump straight to a section.</p>
   </div>
 
   <div class="card">
-    <div class="kick"><span>NCAA FB</span><span class="dot"></span></div>
+    <div class="kick"><span>NCAA Football</span><span class="dot"></span></div>
     <div class="body">
       <a class="nm" href="https://volanalytics.github.io/NCAAFB-Projections/"><span class="ar">&#9654;</span> Projections</a>
       <p class="blurb">Projected scores, margins and totals across the college
@@ -124,7 +124,7 @@ to see the current slate, or jump straight to a section.</p>
     </div>
   </div>
 
-  <div class="card" style="--accent:#5BC8E8;--panel:#0F2130;--panel-2:#16303F;--line:#204A5E">
+  <div class="card">
     <div class="kick"><span>NHL</span><span class="dot"></span></div>
     <div class="body">
       <a class="nm" href="https://volanalytics.github.io/NHL-Projections/"><span class="ar">&#9654;</span> Projections</a>
