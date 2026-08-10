@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-<!-- saved from url=(0038)https://volanalytics.github.io/Portal/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="dark">
 <title>Prediction Portal</title>
 <meta name="description" content="Projection models for NCAA basketball, NCAA football, and the NHL.">
-<link rel="preconnect" href="https://fonts.googleapis.com/">
-<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-<link href="./index_files/css2" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --field:#08161B; --panel:#102A31; --panel-2:#173A44;
@@ -46,11 +45,22 @@ h2:first-of-type{margin-top:0}
   display:flex;justify-content:space-between;align-items:center;gap:8px}
 .card .kick .dot{width:8px;height:8px;border-radius:99px;
   background:var(--accent);flex:none}
-.card .body{padding:14px 12px 12px;flex:1}
-.card .nm{display:block;font-weight:700;font-size:20px;line-height:1.2;
-  letter-spacing:.04em;color:var(--chalk)}
-.card .nm:hover{color:var(--accent)}
-.card .blurb{color:#C4D2DF;font-size:13px;margin:8px 0 0}
+.card .body{padding:14px 12px 12px;flex:1;display:flex;flex-direction:column}
+.card .nm{display:flex;align-items:center;justify-content:center;gap:8px;
+  order:2;margin-top:auto;padding-top:13px;
+  background:var(--accent);color:var(--field);
+  font-weight:700;font-size:14px;line-height:1;
+  letter-spacing:.12em;text-transform:uppercase;
+  padding:13px 16px;border-radius:8px;text-align:center;
+  box-shadow:0 3px 14px rgba(0,0,0,.30),inset 0 1px 0 rgba(255,255,255,.16);
+  transition:transform .12s,box-shadow .12s,filter .12s}
+.card .nm:hover{color:var(--field);filter:brightness(1.09);
+  transform:translateY(-2px);
+  box-shadow:0 7px 20px rgba(0,0,0,.38),inset 0 1px 0 rgba(255,255,255,.2)}
+.card .nm:active{transform:translateY(0)}
+.card .nm:focus-visible{outline:2px solid var(--chalk);outline-offset:3px}
+.card .nm .ar{font-size:15px;line-height:1}
+.card .blurb{color:#C4D2DF;font-size:13px;margin:0;order:1}
 .card .foot{padding:9px 12px;border-top:1px solid rgba(36,64,92,.6);
   display:flex;gap:6px;flex-wrap:wrap}
 .card .foot a{font-size:11px;letter-spacing:.08em;text-transform:uppercase;
@@ -72,7 +82,7 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:12px;
 </head>
 <body><header><div class="wrap">
 <div class="brand"><h1>Prediction Portal</h1>
-<span class="stamp">Projection models · NCAA MBB · NCAA FB · NHL</span></div>
+<span class="stamp">Projection models &middot; NCAA MBB &middot; NCAA FB &middot; NHL</span></div>
 </div></header>
 <main><div class="wrap">
 
@@ -83,30 +93,30 @@ to see the current slate, or jump straight to a section.</p>
 <div class="grid">
 
   <div class="card">
-    <div class="kick"><span>NCAA Mens Basketball</span><span class="dot"></span></div>
+    <div class="kick"><span>NCAA MBB</span><span class="dot"></span></div>
     <div class="body">
-      <a class="nm" href="https://volanalytics.github.io/NCAABB-Projections/">Projections</a>
+      <a class="nm" href="https://volanalytics.github.io/NCAABB-Projections/"><span class="ar">&#9654;</span> Projections</a>
       <p class="blurb">Game slate with rotation-level detail: each team's units,
       what they are worth against that specific opponent, and on-floor share.</p>
     </div>
     <div class="foot">
       <a href="https://volanalytics.github.io/NCAABB-Projections/index.html">Slate</a>
-      <a href="https://volanalytics.github.io/NCAABB-Projections/ev.html">Market</a>
-	  <a href="https://volanalytics.github.io/NCAABB-Projections/teams.html">Teams</a>
+      <a href="https://volanalytics.github.io/NCAABB-Projections/teams.html">Teams</a>
+      <a href="https://volanalytics.github.io/NCAABB-Projections/players.html">Players</a>
       <a href="https://volanalytics.github.io/NCAABB-Projections/tracking.html">Tracking</a>
       <a href="https://volanalytics.github.io/NCAABB-Projections/about.html">About</a>
     </div>
   </div>
 
   <div class="card">
-    <div class="kick"><span>NCAA Football</span><span class="dot"></span></div>
+    <div class="kick"><span>NCAA FB</span><span class="dot"></span></div>
     <div class="body">
-      <a class="nm" href="https://volanalytics.github.io/NCAAFB-Projections/">Projections</a>
+      <a class="nm" href="https://volanalytics.github.io/NCAAFB-Projections/"><span class="ar">&#9654;</span> Projections</a>
       <p class="blurb">Projected scores, margins and totals across the college
       football slate, with a market page comparing the model to posted numbers.</p>
     </div>
     <div class="foot">
-      <a href="https://volanalytics.github.io/NCAAFB-Projections/index.html">Slate</a>
+      <a href="https://volanalytics.github.io/NCAAFB-Projections/index.html">Games</a>
       <a href="https://volanalytics.github.io/NCAAFB-Projections/ev.html">Market</a>
       <a href="https://volanalytics.github.io/NCAAFB-Projections/teams.html">Teams</a>
       <a href="https://volanalytics.github.io/NCAAFB-Projections/tracking.html">Tracking</a>
@@ -117,15 +127,15 @@ to see the current slate, or jump straight to a section.</p>
   <div class="card" style="--accent:#5BC8E8;--panel:#0F2130;--panel-2:#16303F;--line:#204A5E">
     <div class="kick"><span>NHL</span><span class="dot"></span></div>
     <div class="body">
-      <a class="nm" href="https://volanalytics.github.io/NHL-Projections/">Projections</a>
+      <a class="nm" href="https://volanalytics.github.io/NHL-Projections/"><span class="ar">&#9654;</span> Projections</a>
       <p class="blurb">Skater and goalie projections for the current window, plus
       a market page and running accuracy tracking.</p>
     </div>
     <div class="foot">
       <a href="https://volanalytics.github.io/NHL-Projections/index.html">Slate</a>
-      <a href="https://volanalytics.github.io/NHL-Projections/ev.html">Market</a>
       <a href="https://volanalytics.github.io/NHL-Projections/players.html">Players</a>
-	  <a href="https://volanalytics.github.io/NHL-Projections/tracking.html">Tracking</a>
+      <a href="https://volanalytics.github.io/NHL-Projections/ev.html">Market</a>
+      <a href="https://volanalytics.github.io/NHL-Projections/tracking.html">Tracking</a>
       <a href="https://volanalytics.github.io/NHL-Projections/about.html">About</a>
     </div>
   </div>
@@ -133,6 +143,5 @@ to see the current slate, or jump straight to a section.</p>
 </div>
 
 </div></main>
-<footer><div class="wrap">Prediction Portal · model output, not investment/wagering advice.</div></footer>
-
+<footer><div class="wrap">Prediction Portal &middot; model output, not investment/wagering advice.</div></footer>
 </body></html>
